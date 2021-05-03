@@ -45,12 +45,12 @@ public class StringMethods {
             }
 */
             String vtsPacket = "861230046575644,210502184427,23.729191,090.422920,0.000000,105,0,9395,5503,1.31,13,29";
-           String dataArray [] = vtsPacket.split(",");
+           String[] dataArray = vtsPacket.split(",");
             System.out.println(dataArray[0]);
 
-            int defaultSpeed =200;
-            Integer currentSpeed = Integer.valueOf(dataArray[5]);
-            //System.out.println(currentSpeed);
+            int defaultSpeed =50;
+            int currentSpeed = Integer.parseInt(dataArray[5]);
+            System.out.println(currentSpeed);
 
             if (currentSpeed>defaultSpeed){
                 System.out.println("Over Speed !!");
@@ -59,4 +59,4 @@ public class StringMethods {
 
 }
 
-// date-time, convertion (String to date/date to string)
+// date-time, conversion (String to date/date to string)
